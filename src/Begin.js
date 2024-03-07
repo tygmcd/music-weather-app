@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import './css/Begin.css'
+import { useNavigate } from 'react-router-dom'
 
 const Begin = () => {
     const [zipcode, setZipcode] = useState('')
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("zip submitted" + zipcode);
+
+        navigate('/home', { state : { zip: {zipcode}}});
     };
 
     return (
