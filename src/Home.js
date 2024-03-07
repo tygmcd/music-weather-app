@@ -17,7 +17,7 @@ const Home = () => {
     const [weatherData, setWeatherData] = useState(null);
     const [isPending, setIsPending] = useState(true)
     
-    const key = "cd863b9b9203e81134f9111cdef8f337";
+    const key = process.env.REACT_APP_OW_KEY;
 
     <IconContext.Provider value={{ className: 'react-icons' }}></IconContext.Provider>
 
